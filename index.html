@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syifa Waita – Portofolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+
+  --bg: #170D18;
+  --bg2: #0B080D;
+  --surface: #241822;
+  --soft: #30202D;
+  --brand: #D69A9D;
+  --brand-hover: #E4B5B7;
+  --ink: #FFF5ED;
+  --muted: #C2AEB8;
+  --line: rgba(214, 154, 157, 0.18);
+  --on-brand: #170D18;
+  --shadow: rgba(0, 0, 0, 0.4);
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #F7F0E9;
+  --bg2: #EDE1D8;
+  --surface: #FFFCF8;
+  --soft: #F3EAE5;
+  --brand: #873D56;
+  --brand-hover: #6D2F44;
+  --ink: #38212D;
+  --muted: #806B76;
+  --line: rgba(135, 61, 86, 0.15);
+  --on-brand: #FFFFFF;
+  --shadow: rgba(56, 33, 45, 0.08);
+
+  color-scheme: light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(214,154,157,.12), transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(135,61,86,.15), transparent 50%),
+    linear-gradient(140deg, var(--bg), var(--bg2)) fixed;
+  font: 400 14px/1.65 var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  transition: background .3s ease, color .3s ease;
+}
+
+/* RUNNING TEXT */
+.welcome-marquee, .footer-marquee {
+  background: var(--surface);
+  color: var(--ink);
+  overflow: hidden;
+  padding: 7px 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.footer-marquee {
+  border-bottom: none;
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+
+.marq, .marq-reverse {
+  display: flex;
+  width: max-content;
+}
+
+.marq {
+  animation: geser 22s linear infinite;
+}
+
+.marq-reverse {
+  animation: geserKanan 22s linear infinite;
+}
+
+.marq span, .marq-reverse span {
+  padding-right: 3rem;
+  white-space: nowrap;
+}
+
+@keyframes geser {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes geserKanan {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* CONTAINER */
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 16px;
+}
+
+.brand {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--brand);
+  text-transform: uppercase;
+}
+
+button.theme {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 12px var(--font-main);
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .25s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button.theme:hover {
+  border-color: var(--brand);
+  transform: translateY(-1px);
+}
+
+/* PROFILE */
+.profile {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 12px 35px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--brand), transparent, var(--brand));
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--soft));
+  color: var(--on-brand);
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: 800;
+  border: 4px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--brand), 0 8px 20px var(--shadow);
+}
+
+.profile h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.profile .sub {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin-bottom: 12px;
+}
+
+.profile .bio-desc {
+  font-size: 14px;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0 auto 16px;
+  max-width: 480px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* NAVIGATION */
+.tabs-wrapper {
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  margin: 20px 0 24px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow: 0 10px 25px var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+@media(min-width: 600px) {
+  .tabs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.tabs button {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  font: 600 12.5px var(--font-main);
+  padding: 10px 6px;
+  border-radius: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.tabs button:hover {
+  color: var(--ink);
+  background: var(--soft);
+}
+
+.tabs button[aria-current="page"] {
+  background: var(--brand);
+  color: var(--on-brand);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  font-weight: 700;
+}
+
+.tabs button:focus-visible {
+  outline: 2px solid var(--brand);
+}
+
+/* PANELS */
+.view {
+  display: none;
+}
+
+.view.on {
+  display: block;
+  animation: fadeIn .35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.panel h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel p {
+  margin-bottom: 14px;
+  color: var(--ink);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* BIODATA */
+.bio-grid {
+  display: grid;
+  grid-template-columns: minmax(130px, max-content) 12px 1fr;
+  gap: 10px 4px;
+  font-size: 14px;
+  align-items: baseline;
+}
+
+.bio-label {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.bio-colon {
+  text-align: center;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.bio-val {
+  color: var(--ink);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* MOTTO */
+.motto-panel {
+  padding: 24px 16px;
+  margin-top: 24px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.motto-panel h3 {
+  font-size: 12px;
+  color: var(--brand);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.motto-panel blockquote {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ACADEMIC TIMELINE */
+.timeline-container {
+  position: relative;
+  padding-left: 24px;
+  margin: 16px 0 8px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 2px;
+  background: var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--brand);
+}
+
+.timeline-content {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.timeline-date {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--brand);
+  background: var(--surface);
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+/* HOBBIES WITH LOGOS */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+@media(min-width: 520px) {
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hobby-card {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.hobby-img-wrapper {
+  width: 100%;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--surface), var(--soft));
+}
+
+.hobby-logo {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--brand), var(--soft));
+  color: var(--on-brand);
+  box-shadow: 0 8px 20px var(--shadow);
+  border: 1px solid var(--line);
+  transition: transform .3s ease;
+}
+
+.hobby-logo svg {
+  width: 45px;
+  height: 45px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hobby-card:hover .hobby-logo {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.hobby-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hobby-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.btn-more {
+  background: var(--brand);
+  color: var(--on-brand);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+.btn-more:hover {
+  opacity: .9;
+  transform: translateY(-1px);
+}
+
+/* PERBAIKAN: DESKRIPSI HOBI RATA KIRI-KANAN */
+.hobby-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: max-height .4s ease, opacity .3s ease, margin-top .3s ease;
+}
+
+.hobby-info.active {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* EXPERIENCE */
+.exp-section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.exp-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.exp-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media(max-width: 480px) {
+  .bio-grid {
+    grid-template-columns: 110px 10px minmax(0, 1fr);
+    font-size: 13px;
+    gap: 9px 3px;
+  }
+
+  .profile {
+    padding: 28px 16px;
+  }
+
+  .profile h1 {
+    font-size: 27px;
+  }
+
+  .panel {
+    padding: 19px;
+  }
+
+  .tabs button {
+    font-size: 10.5px;
+    padding: 9px 3px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- WELCOME RUNNING TEXT -->
+<div class="welcome-marquee" aria-label="Welcome Banner">
+  <div class="marq" aria-hidden="true">
+    <span>✦ Welcome to Syifa's Website ✦</span>
+    <span>✦ Welcome to Syifa's Website ✦</span>
+    <span>✦ Welcome to Syifa's Website ✦</span>
+    <span>✦ Welcome to Syifa's Website ✦</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="top">
+  <span class="brand"></span>
+  <button class="theme" id="theme" type="button" aria-label="Ubah Tema Warna">
+    <span>◐</span>
+    <span id="theme-text">Tema</span>
+  </button>
+</header>
+
+<!-- PROFILE -->
+<section class="profile">
+  <img src="https://uploads.onecompiler.io/459kc3qhc/1795028539918/WhatsApp%20Image%202026-11-19%20at%2002.01.46.jpeg" alt="Foto Profil Syifa" class="avatar">
+  <h1>Syifa Waita</h1>
+  <p class="sub">Mahasiswa Informatika • UNUGHA Cilacap</p>
+  <p class="bio-desc">“Terus belajar, bertumbuh, dan menjadi pribadi yang bermanfaat.”</p>
+  <div class="chips">
+    <span class="chip">NIM: 255211034</span>
+    <span class="chip">Angkatan 2025</span>
+  </div>
+</section>
+
+<!-- NAVIGATION -->
+<div class="tabs-wrapper">
+  <nav class="tabs" aria-label="Menu Utama Portofolio">
+    <button type="button" data-v="biodata" aria-current="page">👤 BIODATA</button>
+    <button type="button" data-v="academic">🎓 ACADEMIC</button>
+    <button type="button" data-v="hobi">🎨 HOBBIES</button>
+    <button type="button" data-v="experience">💼 EXPERIENCE</button>
+    <button type="button" data-v="goals">🎯 GOALS</button>
+  </nav>
+</div>
+
+<main>
+
+<!-- BIODATA -->
+<section class="view on" id="biodata">
+
+  <div class="panel">
+    <h2>👤 Identitas Pribadi</h2>
+    <div class="bio-grid">
+      <div class="bio-label">Nama Lengkap</div><div class="bio-colon">:</div><div class="bio-val">Syifa Waita</div>
+      <div class="bio-label">Nama Panggilan</div><div class="bio-colon">:</div><div class="bio-val">Cipa / Syifa</div>
+      <div class="bio-label">Tempat, Tgl Lahir</div><div class="bio-colon">:</div><div class="bio-val">Kaimana, 28 Januari 2007</div>
+      <div class="bio-label">Jenis Kelamin</div><div class="bio-colon">:</div><div class="bio-val">Perempuan</div>
+      <div class="bio-label">Asal Daerah</div><div class="bio-colon">:</div><div class="bio-val">Kaimana, Papua Barat</div>
+      <div class="bio-label">Domisili</div><div class="bio-colon">:</div><div class="bio-val">Cilacap, Jawa Tengah</div>
+      <div class="bio-label">Kewarganegaraan</div><div class="bio-colon">:</div><div class="bio-val">Indonesia</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>💡 Informasi Tambahan</h2>
+    <div class="bio-grid">
+      <div class="bio-label">Kepribadian</div><div class="bio-colon">:</div><div class="bio-val">Introvert</div>
+      <div class="bio-label">Hobi</div><div class="bio-colon">:</div><div class="bio-val">Memasak, Mendengarkan Musik, Editing, dan Healing</div>
+      <div class="bio-label">Organisasi</div><div class="bio-colon">:</div><div class="bio-val">Bendahara Korwil Kumawa Cilacap</div>
+      <div class="bio-label">Cita-cita</div><div class="bio-colon">:</div><div class="bio-val">Menjadi orang yang bermanfaat</div>
+      <div class="bio-label">Pekerjaan Impian</div><div class="bio-colon">:</div><div class="bio-val">Menjadi pribadi yang bermanfaat bagi orang lain</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>📖 About Me</h2>
+    <p>Halo teman-teman,! perkenalkan saya Syifa Waita, biasanya dipanggil atau Cipa. Saya berasal dari Kaimana, Papua Barat, sebuah daerah yang memiliki keindahan alam dan dikenal dengan julukan Kota Senja. Saya tumbuh dan menghabiskan masa kecil di sana sebelum akhirnya memutuskan untuk melanjutkan pendidikan ke luar daerah.</p>
+    <p>Saya termasuk orang yang memiliki kepribadian introvert. Saya lebih nyaman dengan suasana yang tenang dan terkadang membutuhkan waktu untuk menyesuaikan diri dengan lingkungan baru. Meskipun begitu, saya senang mencoba hal-hal baru, belajar dari pengalaman, dan mengenal banyak hal yang sebelumnya belum pernah saya temui.</p>
+    <p>Salah satu pengalaman yang cukup berkesan dalam hidup saya adalah ketika harus merantau dari Kaimana ke Cilacap untuk melanjutkan pendidikan kuliah. Awalnya, tentu tidak mudah karena saya harus jauh dari keluarga dan terbiasa menjalani banyak hal sendiri. Namun, dari pengalaman tersebut saya mulai belajar menjadi lebih mandiri, berani mengambil keputusan, bertanggung jawab, dan menyesuaikan diri dengan lingkungan yang berbeda.</p>
+    <p>Di waktu luang, saya senang memasak, mendengarkan musik, melakukan editing, dan sesekali pergi mencari suasana baru untuk menyegarkan pikiran. Saya juga memiliki ketertarikan terhadap dunia teknologi, komputer, dan desain digital. Bagi saya, mencoba sesuatu yang baru merupakan salah satu cara untuk menambah pengalaman dan mengembangkan kemampuan diri.</p>
+    <p>Saya menyadari bahwa masih banyak hal yang perlu saya pelajari dan perbaiki. Karena itu, saya ingin terus berkembang, tidak mudah menyerah ketika menghadapi kesulitan, dan berusaha menjadi pribadi yang lebih baik dari sebelumnya. Saya percaya bahwa setiap orang memiliki proses dan waktunya masing-masing, sehingga saya tidak ingin terlalu membandingkan perjalanan saya dengan orang lain.</p>
+  </div>
+
+  <div class="motto-panel">
+    <h3>*Motto Hidup*</h3>
+    <blockquote>“Diam dalam proses, bersuara dalam karya, dan terus bertumbuh melampaui batas diri.”</blockquote>
+     </div>
+
+</section>
+
+<!-- ACADEMIC -->
+<section class="view" id="academic">
+
+  <div class="panel">
+    <h2>🎓 Educational Background</h2>
+    <div class="timeline-container">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-title">TK Yaa Bunayya</span>
+          <span class="timeline-date">2013 – 2014</span>
+          <p>Ini adalah awal perjalanan pendidikan saya. Di TK, saya mulai mengenal huruf, angka, warna, serta belajar membaca dan berhitung sederhana. Saya juga mulai belajar berinteraksi, bermain, dan mengenal lingkungan bersama teman-teman.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-title">SD Yapis Kaimana</span>
+          <span class="timeline-date">2014 – 2020</span>
+          <p>Saat memasuki sekolah dasar, saya mulai memperdalam kemampuan membaca, menulis, dan berhitung. Di masa ini, saya juga belajar banyak hal baru, mulai dari pelajaran sekolah hingga membangun pertemanan dan mengenal arti kedisiplinan.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-title">SMP Yapis Kaimana</span>
+          <span class="timeline-date">2020 – 2023</span>
+          <p>Di jenjang SMP, saya mulai mendapatkan pengalaman belajar yang lebih luas. Saya belajar untuk lebih mandiri, bertanggung jawab, dan berani mencoba berbagai kegiatan. Masa ini juga menjadi bagian dari proses saya dalam mengenali minat dan kemampuan diri.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-title">SMA Negeri 01 Kaimana</span>
+          <span class="timeline-date">2023 – 2025</span>
+          <p>Selama SMA, saya mulai mempersiapkan diri untuk melanjutkan pendidikan ke jenjang yang lebih tinggi. Saya mendapatkan banyak pengalaman, belajar menghadapi tanggung jawab, serta mulai memikirkan pilihan pendidikan dan masa depan yang ingin saya jalani.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-title">Universitas Nahdlatul Ulama Al-Ghazali Cilacap</span>
+          <span class="timeline-date">2025 – Sekarang</span>
+          <p>Saat ini, saya sedang melanjutkan pendidikan di Program Studi Informatika. Di bangku kuliah, saya mulai mengenal lebih dalam dunia teknologi dan komputer. Saya juga belajar memahami berbagai mata kuliah, mendapatkan pengalaman baru, serta mengembangkan kemampuan dan wawasan untuk mempersiapkan masa depan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>🏛️ University Information</h2>
+    <div class="bio-grid">
+      <div class="bio-label">Universitas</div><div class="bio-colon">:</div><div class="bio-val">Universitas Nahdlatul Ulama Al-Ghazali Cilacap</div>
+      <div class="bio-label">Fakultas</div><div class="bio-colon">:</div><div class="bio-val">Fakultas Matematika dan Ilmu Komputer</div>
+      <div class="bio-label">Program Studi</div><div class="bio-colon">:</div><div class="bio-val">Informatika</div>
+      <div class="bio-label">NIM</div><div class="bio-colon">:</div><div class="bio-val">255211034</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>🚀 My Academic Journey</h2>
+    <p> Saat ini saya sedang menempuh pendidikan di Universitas Nahdlatul Ulama Al-Ghazali Cilacap, Program Studi Informatika, Fakultas Matematika dan Ilmu Komputer </p></p>
+    <p>Alasan saya memilih Program Studi Informatika karena menurut saya bidang ini memiliki peluang yang cukup luas dan dibutuhkan dalam berbagai bidang pekerjaan. Selain itu, saya juga ingin memahami bagaimana teknologi bekerja dan bagaimana sebuah sistem atau aplikasi dapat dibuat untuk membantu menyelesaikan berbagai permasalahan.</p>
+    <p>Selama menjalani perkuliahan, saya tertarik dengan berbagai mata kuliah yang dipelajari. Saya senang ketika mendapatkan pengetahuan baru, meskipun terkadang ada materi yang membutuhkan waktu lebih lama untuk dipahami. Bagi saya, kesulitan dalam belajar merupakan bagian dari proses yang harus dijalani.</p>
+  </p>Bagi saya, perjalanan kuliah bukan hanya tentang mendapatkan nilai atau menyelesaikan tugas, tetapi juga tentang bagaimana saya bisa belajar menjadi pribadi yang lebih disiplin, mandiri, bertanggung jawab, dan siap menghadapi tantangan di masa depan.</p>
+  </div>
+
+</section>
+
+<!-- HOBBIES -->
+<section class="view" id="hobi">
+
+  <div class="panel">
+    <h2>🎨 Hobi & Minat</h2>
+    <p>Di luar aktivitas akademis dan organisasi, berikut adalah beberapa aktivitas kegemaran yang menjadi sarana bagi saya untuk mengekspresikan diri, menyegarkan pikiran, serta mengasah kreativitas:</p>
+
+    <div class="hobby-grid">
+
+      <!-- MEMASAK -->
+      <div class="hobby-card">
+        <div class="hobby-img-wrapper">
+          <div class="hobby-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 10h18"/>
+              <path d="M5 10l1.5 10h11L19 10"/>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+              <path d="M12 3V1"/>
+              <path d="M9 15h6"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hobby-body">
+          <div class="hobby-title">Memasak</div>
+          <button type="button" class="btn-more" aria-expanded="false" onclick="toggleHobby('info-memasak', this)">Lihat Selengkapnya</button>
+          <div id="info-memasak" class="hobby-info">
+          Saya suka memasak karena menurut saya kegiatan ini cukup menyenangkan. Saya bisa mencoba berbagai resep, mengolah bahan makanan, dan menggabungkan berbagai bumbu untuk menghasilkan masakan yang enak. Selain itu, memasak juga menjadi salah satu kegiatan yang membuat saya merasa lebih santai. Ada kepuasan tersendiri ketika berhasil membuat makanan dengan hasil yang sesuai harapan.
+          </div>
+        </div>
+      </div>
+
+      <!-- MUSIK -->
+      <div class="hobby-card">
+        <div class="hobby-img-wrapper">
+          <div class="hobby-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hobby-body">
+          <div class="hobby-title">Mendengarkan Musik</div>
+          <button type="button" class="btn-more" aria-expanded="false" onclick="toggleHobby('info-musik', this)">Lihat Selengkapnya</button>
+          <div id="info-musik" class="hobby-info">
+            Mendengarkan musik sudah menjadi salah satu kegiatan yang sering saya lakukan di waktu luang. Biasanya saya mendengarkan musik ketika sedang santai, mengerjakan sesuatu, atau ketika ingin menikmati waktu sendiri. Bagi saya, musik bisa menemani berbagai suasana hati, baik saat sedang senang, sedih, maupun ketika membutuhkan semangat baru.
+          </div>
+        </div>
+      </div>
+
+      <!-- HEALING -->
+      <div class="hobby-card">
+        <div class="hobby-img-wrapper">
+          <div class="hobby-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 18c3-4 5-4 8-1s5 3 10-3"/>
+              <path d="M3 21h18"/>
+              <path d="M12 3a6 6 0 0 1 6 6c0 2-1 3-2 4"/>
+              <path d="M12 3a6 6 0 0 0-6 6c0 2 1 3 2 4"/>
+              <path d="M12 7v5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hobby-body">
+          <div class="hobby-title">Healing</div>
+          <button type="button" class="btn-more" aria-expanded="false" onclick="toggleHobby('info-healing', this)">Lihat Selengkapnya</button>
+          <div id="info-healing" class="hobby-info">
+            Saya senang pergi ke tempat-tempat yang memiliki suasana tenang dan pemandangan yang indah. Sesekali keluar untuk menikmati alam, melihat pemandangan, atau sekadar berjalan-jalan menjadi cara saya untuk menghilangkan rasa penat dari aktivitas sehari-hari. Bagi saya, healing tidak harus selalu pergi jauh atau melakukan sesuatu yang mewah. Terkadang, menikmati suasana sederhana saja sudah cukup membuat pikiran terasa lebih segar.
+          </div>
+        </div>
+      </div>
+
+      <!-- EDITING -->
+      <div class="hobby-card">
+        <div class="hobby-img-wrapper">
+          <div class="hobby-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+              <path d="m15 5 4 4"/>
+              <path d="M4 4h6"/>
+              <path d="M4 8h4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hobby-body">
+          <div class="hobby-title">Editing</div>
+          <button type="button" class="btn-more" aria-expanded="false" onclick="toggleHobby('info-editing', this)">Lihat Selengkapnya</button>
+          <div id="info-editing" class="hobby-info">
+            Saya tertarik dengan kegiatan editing karena saya senang mengolah sesuatu menjadi tampilan yang lebih menarik. Mulai dari mengatur gambar, memilih warna, menyusun elemen, hingga menggabungkan berbagai bagian menjadi sebuah karya visual. Walaupun kemampuan saya masih terus berkembang, saya menikmati proses mencoba berbagai ide dan belajar menghasilkan desain yang lebih bagus.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="view" id="experience">
+
+  <div class="panel">
+    <h2>💼 Experience & Prestasi</h2>
+
+    <div class="exp-section">
+      <div class="exp-title">📌 Organizational Experience</div>
+      <p>Salah Satu pengalaman organiasi yang pernah saya jalani adalah menjadi <strong>Bendahara Korwil Kumawa Cilacap</strong>. Bagi saya, pengalaman ini cukup berkesan karena memberikan kesempatan untuk mencoba hal baru dan belajar menjalankan sebuah tanggung jawab dalam organisasi.</p>
+      <p>Pengalaman ini membentuk diri saya menjadi pribadi yang lebih teliti, disiplin, bertanggung jawab, serta mengasah keterampilan komunikasi dalam tim kerja.</p>
+    </div>
+
+    <div class="exp-section">
+      <div class="exp-title">🏆 Competition & Achievements</div>
+      <p>Sejak masih kecil, sekitar usia 7–8 tahun, saya sudah mulai mengikuti berbagai perlombaan. Kegiatan tersebut terus saya ikuti hingga masa sekolah menengah atas. Sebagian besar perlombaan yang saya ikuti berkaitan dengan bidang keagamaan dan seni.</p>
+      <p>Salah satu pencapaian yang cukup berkesan adalah ketika mengikuti Musabaqah Tilawatil Qur'an (MTQ) Pelajar tingkat SMP. Dalam perlombaan tersebut, saya berhasil meraih Juara 1 pada cabang praktik salat. Selain itu, saya juga beberapa kali berhasil masuk tiga besar dalam perlombaan tilawah dan tartil Al-Qur'an.</p>
+      <p>Tidak hanya itu, saya juga pernah mengikuti perlombaan hafalan Al-Qur'an Juz 30 dan berhasil meraih Juara 1 serta beberapa kali masuk tiga besar. Di bidang seni, saya juga pernah mengikuti perlombaan kaligrafi dan berhasil meraih posisi tiga besar.</p>
+      <p>Bagi saya, setiap perlombaan memiliki cerita dan pengalaman tersendiri. Ada proses latihan, persiapan, rasa gugup, dan tantangan yang harus saya hadapi sebelum mengikuti perlombaan. Dari semua pengalaman tersebut, saya belajar untuk lebih berani tampil, percaya diri, tekun berlatih, dan tidak mudah menyerah.</p>
+      <p>Saya bersyukur pernah mendapatkan kesempatan untuk mengikuti berbagai perlombaan tersebut. Bukan hanya tentang mendapatkan juara, tetapi juga tentang pengalaman, keberanian, dan pelajaran berharga yang masih saya ingat sampai sekarang.</p>
+    </div>
+
+    <div class="exp-section">
+      <div class="exp-title">🤝 Committee Experience</div>
+      <p>Salah satu pengalaman kepanitiaan yang sedang saya jalani saat ini adalah menjadi Bendahara dalam kegiatan NATALAN dan SHARRING SESSION. Kegiatan ini diselenggarakan untuk mahasiswa se-Jawa Tengah yang mengikuti program perkuliahan dari MUI Cabang Kaimana.
+
+<p>Dalam kepanitiaan ini, saya bertanggung jawab membantu pengelolaan keuangan kegiatan. Salah satu tugas yang telah saya lakukan adalah membantu mengoordinasikan dan menagih iuran dari masing-masing korwil sebagai bagian dari persiapan acara.<p>
+
+Meskipun kegiatan ini masih dalam tahap persiapan dan dijadwalkan berlangsung pada awal Desember 2026, saya sudah mendapatkan pengalaman dalam menjalankan tanggung jawab, berkoordinasi dengan berbagai korwil, serta mengelola keuangan untuk kebutuhan kegiatan.
+
+<P>Melalui kepanitiaan ini, saya berharap dapat semakin mengembangkan kemampuan komunikasi, kerja sama tim, ketelitian, dan tanggung jawab dalam menyelesaikan tugas.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GOALS -->
+<section class="view" id="goals">
+  <div class="panel">
+    <h2>🎯 My Goals & Aspirations</h2>
+    <p>Setiap orang pasti memiliki harapan dan tujuan yang ingin dicapai dalam hidupnya. Begitu juga dengan saya. Ada banyak hal yang ingin saya wujudkan, baik untuk diri sendiri maupun untuk orang-orang yang selalu mendukung perjalanan saya.</p>
+    <p>Salah satu tujuan saya saat ini adalah menyelesaikan pendidikan kuliah dengan baik dan tepat waktu. Saya ingin memanfaatkan masa perkuliahan untuk mendapatkan banyak ilmu, pengalaman, sekaligus mengembangkan kemampuan yang nantinya bisa berguna ketika memasuki dunia kerja.</p>
+    <p>Selain itu, saya ingin terus mengembangkan diri menjadi pribadi yang lebih mandiri, percaya diri, disiplin, dan berani mencoba hal-hal baru. Saya juga ingin memperluas pengalaman serta belajar menghadapi berbagai tantangan tanpa mudah menyerah.</p>
+    <p>Dalam hal karier, saya memiliki keinginan untuk bekerja di bidang teknologi, khususnya sebagai Software Engineer. Namun, bagi saya tujuan hidup bukan hanya tentang memiliki pekerjaan yang baik atau mencapai kesuksesan pribadi. Saya juga ingin bisa membanggakan kedua orang tua, membantu keluarga, dan memberikan sesuatu yang bermanfaat bagi orang-orang di sekitar saya.</p>
+    <p>Pada akhirnya, cita-cita terbesar saya adalah menjadi seseorang yang kehadirannya bisa memberikan manfaat bagi orang lain. Saya ingin menjalani kehidupan yang baik, terus berkembang, dan percaya bahwa setiap usaha yang dilakukan dengan sungguh-sungguh akan memiliki hasilnya sendiri.</p>
+    <p>Saya percaya bahwa setiap orang memiliki proses dan waktunya masing masing. Karena itu, saya ingin terus menikmati setiap perjalanan, memperbaiki diri, dan melangkah sedikit demi sedikit menuju masa depan yang saya harapkan.</p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-marquee">
+    <div class="marq-reverse" aria-hidden="true">
+      <span>✦Thanks for Visiting My Website ✦</span>
+      <span>✦Thanks for Visiting My Website ✦</span>
+      <span>✦ Thanks for Visiting My Website ✦</span>
+      <span>✦ Thanks for Visiting My Website ✦</span>
+      <span>✦ Thanks for Visiting My Website ✦</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAVIGATION
+const navButtons = document.querySelectorAll('.tabs button');
+const views = document.querySelectorAll('.view');
+
+function switchTab(targetId) {
+  navButtons.forEach(btn => {
+    if (btn.dataset.v === targetId) {
+      btn.setAttribute('aria-current', 'page');
+    } else {
+      btn.removeAttribute('aria-current');
+    }
+  });
+
+  views.forEach(view => {
+    view.classList.toggle('on', view.id === targetId);
+  });
+}
+
+navButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    switchTab(btn.dataset.v);
+  });
+});
+
+// THEME TOGGLE
+const themeBtn = document.getElementById('theme');
+const themeText = document.getElementById('theme-text');
+const root = document.documentElement;
+
+function setTheme(theme) {
+  if (theme === 'light') {
+    root.setAttribute('data-theme', 'light');
+    themeText.textContent = 'Tema Dark';
+  } else {
+    root.removeAttribute('data-theme');
+    themeText.textContent = 'Tema Light';
+  }
+  localStorage.setItem('syifa-theme', theme);
+}
+
+const savedTheme = localStorage.getItem('syifa-theme');
+setTheme(savedTheme || 'dark');
+
+themeBtn.addEventListener('click', () => {
+  const currentTheme = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  setTheme(currentTheme === 'light' ? 'dark' : 'light');
+});
+
+// HOBBY DETAILS
+function toggleHobby(infoId, btn) {
+  const targetInfo = document.getElementById(infoId);
+  if (!targetInfo) return;
+
+  const isExpanded = targetInfo.classList.toggle('active');
+
+  btn.textContent = isExpanded ? 'Tutup Detail' : 'Lihat Selengkapnya';
+  btn.setAttribute('aria-expanded', String(isExpanded));
+}
+</script>
+
+</body>
+</html>
